@@ -8,7 +8,6 @@ int main() {
     int linhas;
     int colunas;
     int quantidadePalavras;
-    int sla;
 
     printf("Digite o numero de linhas e de colunas: ");
     scanf("%d %d", &linhas, &colunas);
