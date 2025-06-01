@@ -12,31 +12,41 @@ int main() {
     printf("Digite o numero de linhas e de colunas: ");
     scanf("%d %d", &linhas, &colunas);
 
+    // Aloca e inicializa a estrutura da matriz na memória
     TMatriz* matriz = criarMatriz(linhas, colunas);
 
+    // Verifica se a alocação da matriz foi feita
     if (matriz == NULL) {
         printf("Falha ao criar a matriz.\n");
-        return 1;
+        return 1; // Encerra o programa com erro.
     }
 
+    // Lê os caracteres da entrada e preenche a matriz
     matrizPreencher(matriz);
 
     printf("Digite o numero de palavras a serem buscadas: ");
     scanf("%d", &quantidadePalavras);
 
+    // Aloca e inicializa a lista que armazenará as palavras a serem buscadas
     TListaPalavras* lista = criarListaPalavras(quantidadePalavras);
 
     if (lista == NULL) {
-        printf("Falha ao criar a lista.\n");
-        return 1;
+        printf("Falha ao criar a lista de palavras.\n");
+        // Libera a memória da matriz para evitar vazamento antes de sair em caso de erro na lista.
+        liberarMatriz(matriz);
+        return 1; // Encerra o programa com erro.
     }
 
+    // Lê as palavras da entrada e as armazena na lista
     preencherListaPalavras(lista);
 
+    // Inicia o processo de busca
     buscarTodasPalavras(matriz, lista);
 
+    // Exibe os resultados
     imprimirResultadosListaPalavras(lista);
 
+    // Libera a memoria
     liberarListaPalavras(lista);
     liberarMatriz(matriz);
 

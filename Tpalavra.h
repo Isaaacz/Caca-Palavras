@@ -3,7 +3,6 @@
 
 #include "Tcoordenada.h"
 
-
 typedef struct {
     char palavra[100];
     int encontrada;

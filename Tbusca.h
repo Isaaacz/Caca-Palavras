@@ -9,6 +9,6 @@ void buscarTodasPalavras(TMatriz* matriz, TListaPalavras* lista);
 
 int buscarPalavra(TMatriz* matriz, TPalavra* palavra);
 
-int verificarPalavraDirecao(TMatriz* matriz, TPalavra* palavra, int linha, int coluna, int deltaLinha, int deltaColuna);
+int verificarPalavraDirecao(TMatriz* matriz, TPalavra* palavra, int linha, int coluna, int dLinha, int dColuna);
 
 #endif
