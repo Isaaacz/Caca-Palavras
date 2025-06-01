@@ -8,6 +8,7 @@ int main() {
     int linhas;
     int colunas;
     int quantidadePalavras;
+    int sla;
 
     printf("Digite o numero de linhas e de colunas: ");
     scanf("%d %d", &linhas, &colunas);
@@ -27,7 +28,7 @@ int main() {
     TListaPalavras* lista = criarListaPalavras(quantidadePalavras);
 
     if (lista == NULL) {
-        printf("Falha ao criar a lista de palavras.\n");
+        printf("Falha ao criar a lista.\n");
         return 1;
     }
 
@@ -38,6 +39,7 @@ int main() {
     imprimirResultadosListaPalavras(lista);
 
     liberarListaPalavras(lista);
+    liberarMatriz(matriz);
 
     return 0;
 }

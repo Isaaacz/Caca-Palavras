@@ -3,9 +3,9 @@
 #include "Tmatriz.h"
 
 TMatriz* criarMatriz(int linhas, int colunas) {
-    TMatriz* matriz = (TMatriz*) malloc(sizeof(TMatriz));
+    TMatriz* matriz = malloc(sizeof(TMatriz));
     if (matriz == NULL) {
-        printf("Erro: não foi possível alocar memória para a matriz.\n");
+        printf("Erro\n");
         return NULL;
     }
 
@@ -22,7 +22,7 @@ TMatriz* criarMatriz(int linhas, int colunas) {
     for (int i = 0; i < linhas; i++) {
         matriz->conteudo[i] = (char*) malloc(colunas * sizeof(char));
         if (matriz->conteudo[i] == NULL) {
-            printf("Erro: não foi possível alocar memória para as colunas da linha %d.\n", i);
+            printf("Erro\n");
             for (int j = 0; j < i; j++) {
                 free(matriz->conteudo[j]);
             }
@@ -55,4 +55,17 @@ int matrizPreencher(TMatriz* matriz) {
         }
     }
     return 1;
+}
+
+void liberarMatriz(TMatriz* matriz) {
+    if (matriz == NULL) {
+        return;
+    }
+    if (matriz->conteudo != NULL) {
+        for (int i = 0; i < matriz->linhas; i++) {
+            free(matriz->conteudo[i]);
+        }
+        free(matriz->conteudo);
+    }
+    free(matriz);
 }

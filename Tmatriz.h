@@ -14,4 +14,6 @@ void imprimirMatriz(TMatriz* matriz);
 
 int matrizPreencher(TMatriz* matriz);
 
-#endif //TMATRIZ_H
+void liberarMatriz(TMatriz* matriz);
+
+#endif
