@@ -18,7 +18,7 @@ int main() {
     // Verifica se a alocação da matriz foi feita
     if (matriz == NULL) {
         printf("Falha ao criar a matriz.\n");
-        return 1; // Encerra o programa com erro.
+        return 1; // Encerra o programa
     }
 
     // Lê os caracteres da entrada e preenche a matriz
@@ -32,9 +32,9 @@ int main() {
 
     if (lista == NULL) {
         printf("Falha ao criar a lista de palavras.\n");
-        // Libera a memória da matriz para evitar vazamento antes de sair em caso de erro na lista.
+        // Libera a memória da matriz
         liberarMatriz(matriz);
-        return 1; // Encerra o programa com erro.
+        return 1; // Encerra o programa
     }
 
     // Lê as palavras da entrada e as armazena na lista
