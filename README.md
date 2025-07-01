@@ -18,6 +18,35 @@ Este projeto implementa um jogo de caça-palavras utilizando a linguagem C, com 
 - `TlistaPalavras` — armazena a lista de palavras fornecidas pelo usuário
 - *(opcional)* `Tbusca` — módulo de busca que centraliza a lógica de procura na matriz
 
+## Exemplo de uso
+
+Digite o número de linhas e de colunas: 
+4 4
+
+Digite a matriz:
+
+c a s a
+
+p a l a
+
+c o d e
+
+b u s c
+
+Digite o número de palavras a serem buscadas: 
+2
+
+casa
+
+busca
+
+Resultado:
+
+casa: (0,0) -> (0,3)
+
+busca: (3,0) -> (3,4)
+
+
 ## ▶️ Como compilar
 
 Você pode compilar o projeto com `gcc` manualmente:
@@ -25,3 +54,5 @@ Você pode compilar o projeto com `gcc` manualmente:
 ```bash
 gcc main.c Tmatriz.c Tcoordenada.c Tpalavra.c TlistaPalavras.c -o caca-palavras
 ./caca-palavras
+
+
