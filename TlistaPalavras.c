@@ -1,7 +1,7 @@
 #include <stdio.h>
 #include <stdlib.h>
-#include "TListaPalavras.h"
-#include "TPalavra.h"
+#include "TlistaPalavras.h"
+#include "Tpalavra.h"
 
 // Função para criar e alocar dinamicamente uma nova lista de palavras
 TListaPalavras* criarListaPalavras(int quantidade) {

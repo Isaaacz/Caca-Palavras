@@ -1,7 +1,7 @@
 #ifndef TLISTAPALAVRAS_H
 #define TLISTAPALAVRAS_H
 
-#include "TPalavra.h"
+#include "Tpalavra.h"
 
 typedef struct TListaPalavras {
     TPalavra *palavras;

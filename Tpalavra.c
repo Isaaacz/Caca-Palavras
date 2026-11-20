@@ -1,5 +1,5 @@
 #include <string.h>
-#include "TPalavra.h"
+#include "Tpalavra.h"
 #include "Tcoordenada.h"
 
 // Função para criar e inicializar uma nova palavra
